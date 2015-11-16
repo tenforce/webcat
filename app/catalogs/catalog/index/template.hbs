@@ -1,7 +1,11 @@
-{{catalogs/show-overview catalog=model}}
+<div class="container">
+  {{link-to "catalogs" "catalogs" classNames="btn"}}
 
-{{catalogs/show-datasets catalog=model}}
+  {{catalogs/show-overview catalog=model}}
 
-{{#link-to 'datasets.new' classNames="waves-effect waves-light btn"}}
+  {{catalogs/show-datasets catalog=model}}
+
+  {{#link-to 'datasets.new' classNames="waves-effect waves-light btn"}}
   Add dataset
-{{/link-to}}
+  {{/link-to}}
+</div>

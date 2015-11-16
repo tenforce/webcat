@@ -1,4 +1,6 @@
 <div class="container">
+  {{link-to 'Overview' 'application' classNames="btn"}}
+
   <ul class="collection">
     {{#each model as |catalog|}}
       {{#link-to 'catalogs.catalog' catalog tagName="li" classNames="collection-item avatar"}}

@@ -5,7 +5,7 @@ Dataset = DS.Model.extend
   description: DS.attr()
 
   catalog: DS.belongsTo 'catalog'
-  datasets: DS.hasMany 'dataset'
+  distributions: DS.hasMany 'distribution'
 
 
 `export default Dataset`

@@ -1,7 +1,7 @@
 <ul>
   {{#each distributions as |distribution|}}
-    <li>
-      {{dataset.title}}
-    </li>
+    {{#link-to 'distributions.distribution' distribution tagName="li"}}
+      {{distribution.title}}
+    {{/link-to}}
   {{/each}}
 </ul>
