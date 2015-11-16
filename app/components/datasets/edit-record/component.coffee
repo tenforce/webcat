@@ -3,7 +3,8 @@
 DatasetsEditRecordComponent = Ember.Component.extend
   actions:
     save: ->
-      @get('dataset').save()
+      @get('dataset').save().then =>
+        @sendAction "afterSave", @get('dataset')
       return
 
 
