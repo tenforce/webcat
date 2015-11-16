@@ -1,7 +1,7 @@
-<ul>
-  {{#each datasets as |dataset|}}
-    {{#link-to 'datasets.dataset' dataset tagName="li"}}
-      {{dataset.title}}
-    {{/link-to}}
-  {{/each}}
-</ul>
+{{#md-collection content=datasets as |dataset|}}
+  {{#link-to 'datasets.dataset' dataset tagName="li" classNames="collection-item avatar"}}
+    <i class="circle blue mdi-action-favorite"></i>
+    <span class="title">{{dataset.title}}</span>
+    <p>{{dataset.description}}</p>
+  {{/link-to}}
+{{/md-collection}}

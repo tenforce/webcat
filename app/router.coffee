@@ -8,6 +8,7 @@ Router.map ->
   @route 'catalogs', ->
     @route 'new'
     @route 'catalog', path: "/:id", ->
+      @route 'edit'
       @route 'datasets', resetNamespace: true, ->
         @route 'new'
         @route 'dataset', path: "/:dataset_id", ->

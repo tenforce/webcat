@@ -1,11 +1,20 @@
 <div class="container">
-  {{link-to "catalogs" "catalogs" classNames="btn"}}
-
   {{catalogs/show-overview catalog=model}}
+
+  <div class="row">
+    <div class="col s12 m4">
+      {{link-to "catalogs" "catalogs" classNames="btn"}}
+    </div>
+    <div class="col s12 m4">
+      {{#link-to 'datasets.new' classNames="waves-effect waves-light btn"}}
+        Add dataset
+      {{/link-to}}
+    </div>
+    <div class="col s12 m4">
+      {{link-to "edit" "catalogs.catalog.edit" classNames="btn"}}
+    </div>
+  </div>
 
   {{catalogs/show-datasets catalog=model}}
 
-  {{#link-to 'datasets.new' classNames="waves-effect waves-light btn"}}
-  Add dataset
-  {{/link-to}}
 </div>
