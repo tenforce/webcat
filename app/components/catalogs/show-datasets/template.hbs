@@ -1,5 +1,7 @@
 <ul>
   {{#each datasets as |dataset|}}
-    <li>{{dataset.title}}</li>
+    {{#link-to 'datasets.dataset' dataset tagName="li"}}
+      {{dataset.title}}
+    {{/link-to}}
   {{/each}}
 </ul>
