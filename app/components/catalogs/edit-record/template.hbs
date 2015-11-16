@@ -1,0 +1,21 @@
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s12">
+        {{input value=catalog.title placeholder="Title" id="catalog_record_title" type="text"}}
+        <label for="catalog_record_title">Title</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        {{textarea value=catalog.description class="materialize-textarea" id="catalog_record_description"}}
+        <label for="catalog_record_description">Description</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="waves-effect waves-light btn" {{action "save"}}>
+        CREATE!
+      </div>
+    </div>
+  </form>
+</div>

@@ -7,5 +7,7 @@ Router = Ember.Router.extend
 Router.map ->
   @route 'catalogs'
 
+  @route 'catalogs/new'
+  @route 'catalogs/show'
 
 `export default Router`
