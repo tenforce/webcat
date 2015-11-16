@@ -1,0 +1,22 @@
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s12">
+        {{input value=dataset.title placeholder="Title" id="dataset_record_title" type="text"}}
+        <label for="dateset_record_title">Title</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        {{textarea value=dataset.description class="materialize-textarea" id="dataset_record_description"}}
+        <label for="dataset_record_description">Description</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="waves-effect waves-light btn" {{action "save"}}>
+        CREATE!
+      </div>
+    </div>
+  </form>
+</div>
+

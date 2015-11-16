@@ -1,0 +1,9 @@
+<ul class="collection">
+  {{#each model as |catalog|}}
+    <li class="collection-item avatar">
+      <!-- <img src="images/yuna.jpg" alt="" class="circle" /> -->
+      <span class="title">{{catalog.title}}</span>
+      <p>{{catalog.description}}</p>
+    </li>
+  {{/each}}
+</ul>

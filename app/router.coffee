@@ -5,9 +5,12 @@ Router = Ember.Router.extend
   location: config.locationType
 
 Router.map ->
-  @route 'catalogs'
+  @route 'catalogs', ->
+    @route 'new'
+    @route 'catalog', path: "/:id", ->
+      @route 'datasets', resetNamespace: true, ->
+        @route 'new'
+        @route 'dataset', path: "/:dataset_id", ->
 
-  @route 'catalogs/new'
-  @route 'catalogs/show'
 
 `export default Router`

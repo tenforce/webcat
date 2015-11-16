@@ -5,6 +5,8 @@ Catalog = DS.Model.extend {
   description: DS.attr()
   language: DS.attr 'string'
   homepage: DS.attr 'string'
+
+  datasets: DS.hasMany 'dataset'
 }
 
 `export default Catalog`
