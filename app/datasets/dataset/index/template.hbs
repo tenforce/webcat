@@ -1,3 +1,9 @@
-{{datasets/show-overview dataset=model}}
+<div class="container">
+  {{datasets/show-overview dataset=model}}
 
-{{datasets/show-distributions dataset=model}}
+  {{datasets/show-distributions dataset=model}}
+
+  {{#link-to 'distributions.new' classNames="waves-effect waves-light btn"}}
+    Add Distribution
+  {{/link-to}}
+</div>
