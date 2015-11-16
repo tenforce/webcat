@@ -3,7 +3,8 @@
 CatalogsEditRecordComponent = Ember.Component.extend
   actions:
     save: ->
-      @get('catalog').save()
+      @get('catalog').save().then =>
+        @sendAction "afterSave", @get('catalog')
       return
 
 
