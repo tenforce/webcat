@@ -1,2 +1,15 @@
+// Example app.scss
+@import 'components/color';
+
+// Custom color settings go here
+// see ../bower_components/materialize/sass/components/_variables.scss
+$primary-color: color("blue", "darken-1");
+$secondary-color: color("grey", "darken-3");
+/* $spinner-default-color: $primary-color; */
+/* $button-color: color("deep-orange", "accent-3"); */
+
+$secondary-text-color: color("grey", "darken-4");
+
+@import 'components/variables';
 @import 'materialize';
 @import 'ember-cli-materialize';
