@@ -1,15 +1,13 @@
 <div class="container">
   <h1>Overview of catalogs</h1>
 
-  <ul class="collection">
-    {{#each model as |catalog|}}
-      {{#link-to 'catalogs.catalog' catalog tagName="li" classNames="collection-item avatar"}}
-        <!-- <img src="images/yuna.jpg" alt="" class="circle" /> -->
-        <span class="title">{{catalog.title}}</span>
-        <p>{{catalog.description}}</p>
-      {{/link-to}}
-    {{/each}}
-  </ul>
+  {{#md-collection content=model as |catalog|}}
+    {{#link-to 'catalogs.catalog' catalog tagName="li" classNames="collection-item avatar"}}
+      <i class="circle blue mdi-action-store"></i>
+      <span class="title">{{catalog.title}}</span>
+      <p>{{catalog.description}}</p>
+    {{/link-to}}
+  {{/md-collection}}
 
   {{#link-to 'catalogs.new' classNames="waves-effect waves-light btn"}}
     Add Catalog
