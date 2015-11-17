@@ -1,7 +1,7 @@
-<ul>
-  {{#each distributions as |distribution|}}
-    {{#link-to 'distributions.distribution' distribution tagName="li"}}
-      {{distribution.title}}
-    {{/link-to}}
-  {{/each}}
-</ul>
+{{#md-collection content=distributions as |distribution|}}
+  {{#link-to 'distributions.distribution' distribution tagName="li" classNames="collection-item avatar"}}
+    <i class="circle blue mdi-action-assignment"></i>
+    <span class="title">{{distribution.title}}</span>
+    <p>{{distribution.description}}</p>
+  {{/link-to}}
+{{/md-collection}}
