@@ -12,9 +12,11 @@ Router.map ->
       @route 'datasets', resetNamespace: true, ->
         @route 'new'
         @route 'dataset', path: "/:dataset_id", ->
+          @route 'edit'
           @route 'distributions', resetNamespace: true, ->
             @route 'new'
-            @route 'distribution', path: "/:distribution_id"
+            @route 'distribution', path: "/:distribution_id", ->
+              @route 'edit'
 
 
 `export default Router`
