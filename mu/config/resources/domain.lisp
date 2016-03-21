@@ -19,7 +19,7 @@
                              :as "record"))
   :has-many `((dataset :via ,(s-prefix "dcat:dataset")
                        :as "datasets"))
-  :resource-base (s-url "http://your-data-stories.eu/catalogs/")
+  :resource-base (s-url "http://webcat.tmp.tenforce.com/catalogs/")
   :on-path "catalogs")
 
 (define-resource dataset ()
@@ -47,7 +47,7 @@
                        :as "themes")
               (distribution :via ,(s-prefix "dcat:distribution")
                             :as "distributions"))
-  :resource-base (s-url "http://your-data-stories.eu/datasets/")
+  :resource-base (s-url "http://webcat.tmp.tenforce.com/datasets/")
   :on-path "datasets")
 
 (define-resource distribution ()
@@ -67,7 +67,7 @@
                       :as "dataset")
              (format :via ,(s-prefix "dct:format")
                      :as "format"))
-  :resource-base (s-url "http://your-data-stories.eu/distributions/")
+  :resource-base (s-url "http://webcat.tmp.tenforce.com/distributions/")
   :on-path "distributions")
 
 (define-resource catalog-record ()
@@ -81,7 +81,7 @@
                       :as "catalog")
              (dataset :via ,(s-prefix "foaf:primaryTopic")
                       :as "primary-topic"))
-  :resource-base (s-url "http://your-data-stories.eu/catalog-records/")
+  :resource-base (s-url "http://webcat.tmp.tenforce.com/catalog-records/")
   :on-path "catalog-records")
 
 (define-resource concept ()
@@ -91,12 +91,12 @@
                        :as "datasets"))
   :has-one `((concept-scheme :via ,(s-prefix "skos:inScheme")
                              :as "concept-scheme"))
-  :resource-base (s-url "http://your-data-stories.eu/concepts/")
+  :resource-base (s-url "http://webcat.tmp.tenforce.com/concepts/")
   :on-path "concepts")
 
 (define-resource concept-scheme ()
   :class (s-prefix "skos:ConceptScheme")
-  :resource-base (s-url "http://your-data-stories.eu/concept-schemes/")
+  :resource-base (s-url "http://webcat.tmp.tenforce.com/concept-schemes/")
   :has-many `((catalog :via ,(s-prefix "dcat:themeTaxonomy")
                        :inverse t
                        :as "catalogs")
@@ -113,7 +113,7 @@
               (dataset :via ,(s-prefix "dct:publisher")
                        :inverse t
                        :as "datasets"))
-  :resource-base (s-url "http://your-data-stories.eu/agents/")
+  :resource-base (s-url "http://webcat.tmp.tenforce.com/agents/")
   :on-path "agents")
 
 (define-resource format ()
