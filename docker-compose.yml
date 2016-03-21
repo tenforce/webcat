@@ -1,7 +1,7 @@
 version: "2"
 services:
   webcat:
-    image: tenforce/webcat:0.1.0
+    image: tenforce/webcat:0.2.0
     links:
       - identifier:backend
     ports:
