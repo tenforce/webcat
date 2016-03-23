@@ -17,3 +17,9 @@ $secondary-text-color: color("grey", "darken-4");
 .spacer {
     height: 2rem;
 }
+
+// Hack to make sure actions work on iOS devices also nicer on the desktop.
+// The clickable class is used in cases where we change the tag of a link-to.
+[data-ember-action]:not(:disabled), .clickable {
+  cursor: pointer;
+}
