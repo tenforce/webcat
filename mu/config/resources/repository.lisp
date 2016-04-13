@@ -9,3 +9,4 @@
 (add-prefix "skos" "http://www.w3.org/2004/02/skos/core#")
 (add-prefix "vcard" "http://www.w3.org/2006/vcard/ns#")
 (add-prefix "xsd" "http://www.w3.org/2001/XMLSchema#")
+(add-prefix "tfdcat" "http://www.tenforce.com/vocabularies/dcat/")

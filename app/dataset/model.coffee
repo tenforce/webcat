@@ -5,6 +5,7 @@ Dataset = DS.Model.extend
   description: DS.attr()
 
   catalog: DS.belongsTo 'catalog'
+  themes: DS.hasMany 'theme'
   distributions: DS.hasMany 'distribution'
 
 

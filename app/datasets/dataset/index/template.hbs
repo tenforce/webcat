@@ -2,23 +2,29 @@
   {{datasets/show-overview dataset=model}}
 
   <div class="row">
-    <div class="col s12 m3">
+    <div class="col s12 m2">
       {{link-to "catalog" "catalogs.catalog" classNames="btn"}}
+    </div>
+    <div class="col s12 m3">
+      {{#link-to 'themes.new' classNames="waves-effect waves-light btn"}}
+        Add theme
+      {{/link-to}}
     </div>
     <div class="col s12 m3">
       {{#link-to 'distributions.new' classNames="waves-effect waves-light btn"}}
         Add distribution
       {{/link-to}}
     </div>
-    <div class="col s12 m3">
+    <div class="col s12 m2">
       {{link-to "edit" "datasets.dataset.edit" classNames="btn"}}
     </div>
-    <div class="col s12 m3">
+    <div class="col s12 m2">
       <div class="btn red" {{action "destroy" model}}>
         Destroy
       </div>
     </div>
   </div>
 
+  {{datasets/show-themes dataset=model}}
   {{datasets/show-distributions dataset=model}}
 </div>

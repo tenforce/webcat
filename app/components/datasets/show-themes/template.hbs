@@ -1,0 +1,6 @@
+{{#md-collection content=themes as |theme|}}
+  {{#link-to 'themes.theme' theme tagName="li" classNames="collection-item avatar clickable"}}
+    <i class="circle blue mdi-action-subject"></i>
+    <span class="title">{{theme.prefLabel}}</span>
+  {{/link-to}}
+{{/md-collection}}
