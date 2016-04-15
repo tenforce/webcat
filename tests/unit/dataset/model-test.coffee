@@ -2,7 +2,7 @@
 
 moduleForModel 'dataset', 'Unit | Model | dataset', {
   # Specify the other units that are required for this test.
-  needs: []
+  needs: ['model:catalog', 'model:distribution']
 }
 
 test 'it exists', (assert) ->
