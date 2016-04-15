@@ -1,5 +1,8 @@
 {{#md-collection content=datasets as |dataset|}}
   {{#link-to 'datasets.dataset' dataset tagName="li" classNames="collection-item avatar clickable"}}
+    {{#if dataset.isNew}}
+      {{md-badge class='red white-text' text="draft"}}
+    {{/if}}
     <i class="circle blue mdi-action-assignment"></i>
     <span class="title">{{dataset.title}}</span>
     <p>{{dataset.description}}</p>
