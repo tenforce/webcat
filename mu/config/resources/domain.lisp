@@ -43,8 +43,8 @@
              (catalog-record :via ,(s-prefix "foaf:primaryTopic")
                              :inverse t
                              :as "primary-topic"))
-  :has-many `((concept :via ,(s-prefix "dcat:theme")
-                       :as "themes")
+  :has-many `((theme :via ,(s-prefix "dcat:theme")
+                     :as "themes")
               (distribution :via ,(s-prefix "dcat:distribution")
                             :as "distributions"))
   :resource-base (s-url "http://webcat.tmp.tenforce.com/datasets/")
@@ -84,15 +84,16 @@
   :resource-base (s-url "http://webcat.tmp.tenforce.com/catalog-records/")
   :on-path "catalog-records")
 
-(define-resource concept ()
-  :class (s-prefix "skos:Concept")
+(define-resource theme ()
+  :class (s-prefix "tfdcat:Theme")
+  :properties `((:pref-label :string ,(s-prefix "skos:prefLabel")))
   :has-many `((dataset :via ,(s-prefix "dcat:theme")
                        :inverse t
                        :as "datasets"))
   :has-one `((concept-scheme :via ,(s-prefix "skos:inScheme")
                              :as "concept-scheme"))
-  :resource-base (s-url "http://webcat.tmp.tenforce.com/concepts/")
-  :on-path "concepts")
+  :resource-base (s-url "http://webcat.tmp.tenforce.com/themes/")
+  :on-path "themes")
 
 (define-resource concept-scheme ()
   :class (s-prefix "skos:ConceptScheme")
@@ -100,9 +101,9 @@
   :has-many `((catalog :via ,(s-prefix "dcat:themeTaxonomy")
                        :inverse t
                        :as "catalogs")
-              (concept :via ,(s-prefix "skos:inScheme")
-                       :inverse t
-                       :as "concepts"))
+              (theme :via ,(s-prefix "skos:inScheme")
+                     :inverse t
+                     :as "themes"))
   :on-path "concept-schemes")
 
 (define-resource agent ()

@@ -20,6 +20,10 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://resource/datasets/"
   end
 
+  match "/themes/*path" do
+    Proxy.forward conn, path, "http://resource/themes/"
+  end
+
   match "/distributions/*path" do
     Proxy.forward conn, path, "http://resource/distributions/"
   end

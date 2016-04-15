@@ -17,6 +17,10 @@ Router.map ->
             @route 'new'
             @route 'distribution', path: "/:distribution_id", ->
               @route 'edit'
+          @route 'themes', resetNamespace: true, ->
+            @route 'new'
+            @route 'theme', path: "/:theme_id", ->
+              @route 'edit'
 
 
 `export default Router`

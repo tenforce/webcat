@@ -1,0 +1,24 @@
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s12">
+        {{#power-select selected=selected searchField="prefLabel"
+                        searchPlaceholder="Find a theme or create one"
+                        search=(action 'search')
+                        onchange=(action 'handleChange')
+                        as |option|}}
+          {{#if option.id}}
+            {{option.prefLabel}}
+          {{else}}
+            <em>Create theme <ins>{{option.prefLabel}}</ins></em>
+          {{/if}}
+        {{/power-select}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="waves-effect waves-light btn" {{action "save"}}>
+        Save
+      </div>
+    </div>
+  </form>
+</div>
