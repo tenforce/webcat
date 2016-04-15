@@ -22,4 +22,4 @@ test 'it renders', (assert) ->
     {{/datasets/show-distributions}}
   """
 
-  assert.equal @$().text().trim(), 'template block text'
+  assert.equal @$().text().trim(), ''
