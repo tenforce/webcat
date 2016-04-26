@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/tenforce/webcat.svg?branch=master)](https://travis-ci.org/tenforce/webcat)
+
 # Webcat
 
 webCAT is a frontend for muDCAT, a configuration for mu.semte.ch which follows
