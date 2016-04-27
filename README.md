@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/tenforce/webcat.svg?branch=master)](https://travis-ci.org/tenforce/webcat)
+[![Code Climate](https://codeclimate.com/github/tenforce/webcat/badges/gpa.svg)](https://codeclimate.com/github/tenforce/webcat)
+[![Test Coverage](https://codeclimate.com/github/tenforce/webcat/badges/coverage.svg)](https://codeclimate.com/github/tenforce/webcat/coverage)
 
 # Webcat
 
