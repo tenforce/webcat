@@ -7,16 +7,14 @@ var options = {
   loaderExclusions: [],
   enableCoverage: true,
   cliOptions: {
-    reporters: ['json', 'lcov', 'html'],
+    reporters: ['lcov', 'html'],
     autostart: true,
     lcovOptions: {
-      outputFile: 'coverage/lcov.info'
-    },
-    jsonOptions: {
-      outputFile: 'coverage/coverage.json'
-    },
-    htmlOptions: {
-      outputFile: 'coverage/coverage.html'
+      renamer: function(moduleName) {
+        var expression = /^webcat/;
+        var name = moduleName.replace(/^webcat\/config/, 'config');
+        return name.replace(expression, 'app') + '.js';
+      }
     }
   }
 };
