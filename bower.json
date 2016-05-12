@@ -10,8 +10,11 @@
     "ember-qunit-notifications": "0.0.7",
     "ember-resolver": "^0.1.21",
     "jquery": "^2.1.4",
-    "loader.js": "ember-cli/loader.js#3.2.1",
+    "loader.js": "ember-cli/loader.js#3.6.1",
     "qunit": "~1.18.0",
     "materialize": "~0.97.0"
+  },
+  "devDependencies": {
+    "blanket": "5e94fc30f2e694bb5c3718ddcbf60d467f4b4d26"
   }
 }
